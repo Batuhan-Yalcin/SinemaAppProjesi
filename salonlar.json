@@ -1,0 +1,1 @@
+[{"id":1,"name":"Salon A","filmler":[{"id":1,"name":"Inception","sure":148,"tur":"Bilim Kurgu"}],"musteriler":[{"id":1,"name":"Ali","email":"ali@mail.com"}]},{"id":2,"name":"Salon B","filmler":[{"id":2,"name":"Titanic","sure":195,"tur":"Romantik"}],"musteriler":[{"id":2,"name":"Ayşe","email":"ayse@mail.com"}]}]

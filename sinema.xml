@@ -1,0 +1,40 @@
+<Sinema>
+    <Salon>
+        <id>1</id>
+        <adi>Salon A</adi>
+        <Filmler>
+            <Film>
+                <id>1</id>
+                <adi>Inception</adi>
+                <sure>148</sure>
+                <tur>Bilim Kurgu</tur>
+            </Film>
+        </Filmler>
+        <Musteriler>
+            <Musteri>
+                <id>1</id>
+                <ad>Ali</ad>
+                <email>ali@mail.com</email>
+            </Musteri>
+        </Musteriler>
+    </Salon>
+    <Salon>
+        <id>2</id>
+        <adi>Salon B</adi>
+        <Filmler>
+            <Film>
+                <id>2</id>
+                <adi>Titanic</adi>
+                <sure>195</sure>
+                <tur>Romantik</tur>
+            </Film>
+        </Filmler>
+        <Musteriler>
+            <Musteri>
+                <id>2</id>
+                <ad>Ayşe</ad>
+                <email>ayse@mail.com</email>
+            </Musteri>
+        </Musteriler>
+    </Salon>
+</Sinema>

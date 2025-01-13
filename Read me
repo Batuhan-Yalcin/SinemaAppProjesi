@@ -1,0 +1,87 @@
+# Sinema Müşteri Kayıt Sistemi
+
+Bu proje, sinema salonlarına ait film gösterimlerini, salonları ve müşteri bilgilerini yönetmek için geliştirilmiş bir **Java Console** uygulamasıdır. Veriler **JSON** formatında saklanmakta ve kullanıcı etkileşimi ile film, müşteri ve salon bilgileri oluşturulup düzenlenebilmektedir.
+
+## Proje Özeti
+
+Sinema Müşteri Kayıt Sistemi, aşağıdaki işlemleri yapabilen bir yapıya sahiptir:
+- **Film** ekleme ve yönetme
+- **Salon** ekleme, film gösterimleri düzenleme
+- **Müşteri** kaydı oluşturma ve hangi filmleri izlediklerini takip etme
+- Verilerin **JSON** formatında kaydedilmesi ve okunması
+- **Polymorphism** (Çok Biçimlilik) kullanılarak temel sınıflarda metod özelleştirme
+- **Interface** kullanılarak ortak işlemlerin zorunlu hale getirilmesi
+
+## Kullanılan Teknolojiler
+
+- **Java**: Projenin geliştirilmesinde kullanılan ana programlama dili.
+- **JSON**: Verilerin saklanması ve yönetilmesi için kullanılan veri formatı.
+- **OOP (Nesne Yönelimli Programlama)**: Proje, nesne yönelimli programlama ilkelerine göre yapılandırılmıştır.
+
+## Sınıflar
+
+### 1. **BaseEntity**
+   - Temel sınıf olup **Film**, **Salon** ve **Müşteri** sınıflarının ortak özelliklerini ve davranışlarını barındırır.
+   - Ortak bir metot olan `bilgiGoster()` metoduna sahiptir ve bu metot türetilmiş sınıflarda özelleştirilmiştir.
+
+### 2. **Film**
+   - Film bilgilerini (isim, süre, tür) tutar.
+   - Film verileri JSON dosyasına kaydedilir ve okunabilir.
+   - Film ekleme işlemi **IKayit** interface'ini implement ederek yapılır.
+
+### 3. **Salon**
+   - Salon bilgilerini (salon adı) tutar ve hangi filmlerin oynatıldığını takip eder.
+   - Bir salonda gösterilen filmler, salonun liste yapısında tutulur.
+   - Salon verileri JSON dosyasına kaydedilir ve okunabilir.
+
+### 4. **Musteri**
+   - Müşteri bilgilerini (isim) tutar.
+   - Müşterilerin hangi filmlere kaydolduğuna dair bir liste tutulur.
+   - Müşteri verileri JSON dosyasına kaydedilir ve okunabilir.
+
+### 5. **IKayit Interface**
+   - **Film**, **Salon** ve **Musteri** sınıflarında veri eklemeyi zorunlu hale getiren interface.
+   - `kayitEkle()` metodu, veri ekleme işlemlerinin yapılabilmesini sağlar.
+
+## Özellikler
+
+- **Film Ekleme**: Yeni film bilgileri eklenebilir. Film adı, süresi ve türü girilir.
+- **Salon Ekleme**: Yeni salon eklenebilir ve salonların hangi filmleri gösterdiği yönetilebilir.
+- **Müşteri Kaydı**: Müşteriler sisteme eklenebilir ve hangi filmlere kaydoldukları izlenebilir.
+- **Veri Kaydetme**: Film, salon ve müşteri bilgileri JSON dosyalarına kaydedilir ve bu dosyalar daha sonra okunarak ekrana yazdırılabilir.
+
+## Kullanım
+
+1. **Uygulama Başlatma**:
+   - Projeyi çalıştırdıktan sonra kullanıcı, sinemada oynatılacak filmleri, salonları ve müşteri bilgilerini ekleyebilir.
+   - Kullanıcıdan alınan veriler JSON dosyasına kaydedilecektir.
+
+2. **Veri Kaydetme**:
+   - Her yeni film, salon ve müşteri kaydının ardından ilgili JSON dosyaları (`film.json`, `salon.json`, `musteri.json`) güncellenir.
+
+3. **Veri Okuma**:
+   - JSON dosyasındaki veriler okunarak ekran çıktısı olarak yazdırılır.
+
+### Örnek Çıktı:
+
+
+## Dosya Yapısı
+
+- **film.json**: Filmler hakkında bilgiler içerir.
+- **salon.json**: Salonlar ve gösterdikleri filmler hakkında bilgiler içerir.
+- **musteri.json**: Müşteriler ve hangi filmlere kaydoldukları hakkında bilgiler içerir.
+
+## Gereksinimler
+
+- Java 8 ve üzeri
+- JSON işlemleri için **Jackson** veya **Gson** kütüphaneleri
+
+## Geliştirme
+
+Bu projeyi geliştirmeye devam edebilirsiniz. Aşağıdaki geliştirme fikirlerine göz atabilirsiniz:
+- **Müşteri ve Film ilişkisi**: Bir müşteri birden fazla filme kaydolabiliyor. Müşterinin kaydolduğu filmleri takip etmek için veritabanı eklemeleri yapılabilir.
+- **Salon ve Film ilişkisi**: Salonlar hangi filmleri oynatıyor? Bu ilişki daha detaylı bir yapıya kavuşturulabilir.
+
+## Yazar
+
+
